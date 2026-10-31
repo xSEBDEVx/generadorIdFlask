@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generador de Credenciales</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="form-card">
+        <h2>Credenciales Médicas</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="text" name="cargo" placeholder="Especialidad (ej. Cirujano)" required>
+            <input type="text" name="rh" placeholder="Grupo Sanguíneo (ej. O+)" required>
+            
+            <label class="etiqueta-foto">Foto de perfil:</label>
+            <input type="file" name="foto" accept="image/*" capture="user" required>
+
+            
+            <button type="submit">Generar Carné</button>
+        </form>
+    </div>
+
+</body>
+</html>

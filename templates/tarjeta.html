@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tarjeta de Identificación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <div class="contenedor-centrado">
+        <div class="id-card">
+            <h3>Clínica Médica</h3>
+            <img src="{{ url_for('static', filename='uploads/' + foto_url) }}" class="foto-perfil">
+            <h2>{{ nombre }}</h2>
+            <h4>{{ cargo }}</h4>
+            <p class="rh-badge">RH: {{ rh }}</p>
+        </div>
+        
+        <button class="btn-imprimir" onclick="window.print()">Guardar como PDF / Imprimir</button>
+    </div>
+
+</body>
+</html>
